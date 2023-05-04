@@ -1,16 +1,20 @@
-# fecthesispublish
+# FEC-Thesis-publish Mobile Application using Flutter
+## 📄Description
+👋 Hey,
+It's an academic project on which I'm working now. This project collects the THESIS Papers from users when they upload and categorised them into DEPARTMENTS. Also students can write BLOG on various topics so that others can gain knowledge. <br>
+Overall, I'm slightly excited about to finish this project. 😎
 
-A new Flutter project.
 
-## Getting Started
+<!-- ![photo_2023-05-04_12-36-29](https://user-images.githubusercontent.com/57843701/236128465-366ac21f-aa78-4d96-9562-e928e2c06213.jpg height="200x200")<br> -->
+<img src="https://user-images.githubusercontent.com/57843701/236128465-366ac21f-aa78-4d96-9562-e928e2c06213.jpg" width="360" height="700">
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## You can hlep me to support my journey 😉
+🥤[Support by clicking here](https://www.buymeacoffee.com/SaonSikder)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Follow me on Social Media:
+* [YouTube](https://www.youtube.com/BlackOsRa)
+* [Instagram](https://www.instagram.com/blackosra/)
+* [Facebook](https://www.facebook.com/blackosra/)
+
