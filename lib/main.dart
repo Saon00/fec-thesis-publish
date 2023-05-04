@@ -1,4 +1,4 @@
-import 'package:fecthesispublish/screens/sign_up_screen.dart';
+import 'package:fecthesispublish/screens/main_navbar_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -15,25 +15,11 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SignUpScreen(),
+      body: MainNavBarScreen(),
     );
   }
 }
