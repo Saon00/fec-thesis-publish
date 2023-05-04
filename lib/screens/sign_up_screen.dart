@@ -3,53 +3,76 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../components/form_wid.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final double resWidth = MediaQuery.of(context).size.width; // 360
-    final double resHeight = MediaQuery.of(context).size.height; // 677.33
-
     return SafeArea(
       child: Padding(
-        // padding: const EdgeInsets.all(25),
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.all(8.0),
         child: Center(
           child: ListView(
             shrinkWrap: true,
             children: [
-              // text
               Container(
                 decoration: BoxDecoration(
                     color: Colors.grey.shade200,
                     borderRadius: BorderRadius.circular(15)),
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   child: Column(
                     children: [
+                      // sign up
                       Text(
-                        'Sign In',
+                        'Sign Up',
                         style: GoogleFonts.roboto(fontSize: 35),
                       ),
                       const SizedBox(height: 20),
 
-                      // user-name
+                      // first name
                       FormWidget(
+                        text: 'First Name',
                         controller: TextEditingController(),
-                        text: 'Email Address',
                       ),
                       const SizedBox(height: 10),
+
+                      // last name
+                      FormWidget(
+                        text: 'Last Name',
+                        controller: TextEditingController(),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // email address
+                      FormWidget(
+                        text: 'Email Address',
+                        controller: TextEditingController(),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // registration no
+                      FormWidget(
+                        text: 'Registration No.',
+                        controller: TextEditingController(),
+                      ),
+                      const SizedBox(height: 10),
+
                       // password
                       FormWidget(
-                        obsecuretext: true,
-                        controller: TextEditingController(),
                         text: 'Password',
+                        controller: TextEditingController(),
+                      ),
+                      const SizedBox(height: 10),
+                      // confirm password
+                      FormWidget(
+                        text: 'Confirm Password',
+                        controller: TextEditingController(),
                       ),
                       const SizedBox(height: 20),
 
-                      // sign-in button
+                      // sign-up button
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
@@ -57,22 +80,13 @@ class SignInScreen extends StatelessWidget {
                               backgroundColor: Colors.pink,
                             ),
                             onPressed: () {},
-                            child: Text('SIGN IN',
+                            child: Text('SIGN Up',
                                 style: GoogleFonts.poiretOne())),
-                      ),
-
-                      // create new account
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Create an account',
-                          style: GoogleFonts.comfortaa(color: Colors.grey),
-                        ),
                       ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

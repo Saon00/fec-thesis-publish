@@ -1,4 +1,4 @@
-import 'package:fecthesispublish/screens/sign_in_screen.dart';
+import 'package:fecthesispublish/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SignInScreen(),
+      body: SignUpScreen(),
     );
   }
 }
