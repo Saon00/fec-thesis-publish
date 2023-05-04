@@ -1,5 +1,4 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
 
 class PapersScreen extends StatefulWidget {
   const PapersScreen({super.key});
@@ -11,6 +10,6 @@ class PapersScreen extends StatefulWidget {
 class _PapersScreenState extends State<PapersScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }
