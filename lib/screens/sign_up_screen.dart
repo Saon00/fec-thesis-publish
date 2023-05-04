@@ -10,7 +10,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Center(
           child: ListView(
             shrinkWrap: true,
@@ -62,12 +62,14 @@ class SignUpScreen extends StatelessWidget {
                       // password
                       FormWidget(
                         text: 'Password',
+                        obsecuretext: true,
                         controller: TextEditingController(),
                       ),
                       const SizedBox(height: 10),
                       // confirm password
                       FormWidget(
                         text: 'Confirm Password',
+                        obsecuretext: true,
                         controller: TextEditingController(),
                       ),
                       const SizedBox(height: 20),
