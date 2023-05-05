@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CustomColor {
-  static Color BARBG = Colors.blueGrey.shade800;
-  static Color ICONCOLOR = Colors.white;
+  static Color BLUEGREY = Colors.blueGrey.shade800;
+  static Color WHITE = Colors.white;
 }

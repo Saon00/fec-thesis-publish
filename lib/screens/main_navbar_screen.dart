@@ -36,7 +36,7 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
 
       // appbar
       appBar: AppBar(
-        backgroundColor: CustomColor.BARBG,
+        backgroundColor: CustomColor.BLUEGREY,
       ),
 
       // drawer
@@ -44,7 +44,7 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
 
       // bottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: CustomColor.BARBG,
+        backgroundColor: CustomColor.BLUEGREY,
         selectedItemColor: Colors.green.shade300,
         unselectedItemColor: Colors.white,
         currentIndex: _selectIndex,
@@ -70,7 +70,7 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
 
       // floatingActionButton
       floatingActionButton: FloatingActionButton(
-        backgroundColor: CustomColor.BARBG,
+        backgroundColor: CustomColor.BLUEGREY,
         onPressed: () {
           Get.to(const SubmissionScreen());
         },

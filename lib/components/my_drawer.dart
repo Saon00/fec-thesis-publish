@@ -14,7 +14,7 @@ class MyDrawer extends StatelessWidget {
     return SafeArea(
       child: Drawer(
         width: resWIDTH * 0.6,
-        backgroundColor: CustomColor.BARBG,
+        backgroundColor: CustomColor.BLUEGREY,
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -29,31 +29,31 @@ class MyDrawer extends StatelessWidget {
                   ListTile(
                     leading: FaIcon(
                       FontAwesomeIcons.addressCard,
-                      color: CustomColor.ICONCOLOR,
+                      color: CustomColor.WHITE,
                     ),
                     title: Text(
                       'Contact',
-                      style: GoogleFonts.ubuntu(color: CustomColor.ICONCOLOR),
+                      style: GoogleFonts.ubuntu(color: CustomColor.WHITE),
                     ),
                   ),
 
                   // Settings
                   ListTile(
-                    leading: FaIcon(FontAwesomeIcons.gear,
-                        color: CustomColor.ICONCOLOR),
+                    leading:
+                        FaIcon(FontAwesomeIcons.gear, color: CustomColor.WHITE),
                     title: Text(
                       'Settings',
-                      style: GoogleFonts.ubuntu(color: CustomColor.ICONCOLOR),
+                      style: GoogleFonts.ubuntu(color: CustomColor.WHITE),
                     ),
                   ),
 
                   // Our website
                   ListTile(
                     leading: FaIcon(FontAwesomeIcons.earthAsia,
-                        color: CustomColor.ICONCOLOR),
+                        color: CustomColor.WHITE),
                     title: Text(
                       'Our Website',
-                      style: GoogleFonts.ubuntu(color: CustomColor.ICONCOLOR),
+                      style: GoogleFonts.ubuntu(color: CustomColor.WHITE),
                     ),
                   ),
                 ],
@@ -65,10 +65,10 @@ class MyDrawer extends StatelessWidget {
                 },
                 child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.rightFromBracket,
-                        color: CustomColor.ICONCOLOR),
+                        color: CustomColor.WHITE),
                     title: Text(
                       'Log-Out',
-                      style: GoogleFonts.ubuntu(color: CustomColor.ICONCOLOR),
+                      style: GoogleFonts.ubuntu(color: CustomColor.WHITE),
                     )),
               )
             ],
