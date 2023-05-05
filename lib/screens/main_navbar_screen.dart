@@ -3,7 +3,9 @@ import 'package:fecthesispublish/components/my_drawer.dart';
 import 'package:fecthesispublish/screens/blog_screen.dart';
 import 'package:fecthesispublish/screens/papers_screen.dart';
 import 'package:fecthesispublish/screens/profile_screen.dart';
+import 'package:fecthesispublish/screens/submission_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MainNavBarScreen extends StatefulWidget {
   const MainNavBarScreen({super.key});
@@ -69,7 +71,9 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
       // floatingActionButton
       floatingActionButton: FloatingActionButton(
         backgroundColor: CustomColor.BARBG,
-        onPressed: () {},
+        onPressed: () {
+          Get.to(const SubmissionScreen());
+        },
         child: const Icon(Icons.add),
       ),
     );

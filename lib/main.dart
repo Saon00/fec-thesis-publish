@@ -1,11 +1,9 @@
 import 'package:fecthesispublish/screens/main_navbar_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main(List<String> args) {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyApp(),
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -18,8 +16,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: MainNavBarScreen(),
+    return const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MainNavBarScreen(),
     );
   }
 }

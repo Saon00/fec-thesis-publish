@@ -1,6 +1,8 @@
 import 'package:fecthesispublish/components/color.dart';
+import 'package:fecthesispublish/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -57,13 +59,18 @@ class MyDrawer extends StatelessWidget {
                 ],
               ),
 
-              ListTile(
-                  leading: FaIcon(FontAwesomeIcons.rightFromBracket,
-                      color: CustomColor.ICONCOLOR),
-                  title: Text(
-                    'Log-Out',
-                    style: GoogleFonts.ubuntu(color: CustomColor.ICONCOLOR),
-                  ))
+              GestureDetector(
+                onTap: () {
+                  Get.to(const SignUpScreen());
+                },
+                child: ListTile(
+                    leading: FaIcon(FontAwesomeIcons.rightFromBracket,
+                        color: CustomColor.ICONCOLOR),
+                    title: Text(
+                      'Log-Out',
+                      style: GoogleFonts.ubuntu(color: CustomColor.ICONCOLOR),
+                    )),
+              )
             ],
           ),
         ),
