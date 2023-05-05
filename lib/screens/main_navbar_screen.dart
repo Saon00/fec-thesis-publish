@@ -1,3 +1,4 @@
+import 'package:fecthesispublish/components/color.dart';
 import 'package:fecthesispublish/components/my_drawer.dart';
 import 'package:fecthesispublish/screens/blog_screen.dart';
 import 'package:fecthesispublish/screens/papers_screen.dart';
@@ -30,11 +31,20 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+
+      // appbar
+      appBar: AppBar(
+        backgroundColor: CustomColor.BARBG,
+      ),
+
       // drawer
       drawer: const MyDrawer(),
 
       // bottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: CustomColor.BARBG,
+        selectedItemColor: Colors.green.shade300,
+        unselectedItemColor: Colors.white,
         currentIndex: _selectIndex,
         onTap: _onTaped,
         items: const [
@@ -58,6 +68,7 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
 
       // floatingActionButton
       floatingActionButton: FloatingActionButton(
+        backgroundColor: CustomColor.BARBG,
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
