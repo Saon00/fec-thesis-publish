@@ -15,8 +15,8 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
   var _selectIndex = 0;
 
   final List<Widget> _list = [
-    const BlogScreen(),
     const PapersScreen(),
+    const BlogScreen(),
     const ProfileScreen(),
   ];
 
@@ -30,32 +30,36 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      // drawer
       drawer: const MyDrawer(),
+
+      // bottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectIndex,
         onTap: _onTaped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.picture_as_pdf),
-            label: 'Blogs',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.picture_as_pdf),
+            icon: Icon(Icons.web_rounded),
             label: 'Thesis',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.picture_as_pdf),
-            label: 'paper',
+            icon: Icon(Icons.analytics_rounded),
+            label: 'Blogs',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_2_rounded),
+            label: 'Profile',
           ),
         ],
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const ProfileScreen(),
-            Expanded(child: _list[_selectIndex])
-          ],
-        ),
+
+      // body
+      body: _list[_selectIndex],
+
+      // floatingActionButton
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
       ),
     );
   }

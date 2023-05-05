@@ -11,12 +11,6 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      onTap: () {},
-      leading: Image.asset('assets/fec_logo.png'),
-      tileColor: Colors.black54,
-      title: Text('Welcome', style: GoogleFonts.ubuntu()),
-      subtitle: Text('Anamul Haq', style: GoogleFonts.ubuntu()),
-    );
+    return const Scaffold();
   }
 }
