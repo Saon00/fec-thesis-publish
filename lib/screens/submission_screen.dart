@@ -186,6 +186,21 @@ class _SubmissionScreenState extends State<SubmissionScreen> {
               const UploadFileWidget(
                 title: 'Upload PDF',
               ),
+              const SizedBox(height: 20),
+
+              // submit button
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue.shade900,
+                  ),
+                  onPressed: () {},
+                  child: Text('Submit', style: GoogleFonts.ubuntu()),
+                ),
+              ),
+
+              const SizedBox(height: 20),
             ],
           ),
         ),
