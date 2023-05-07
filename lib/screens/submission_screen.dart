@@ -1,9 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:file_picker/file_picker.dart';
+
+import '../components/upload_file.dart';
 
 class SubmissionScreen extends StatefulWidget {
   const SubmissionScreen({super.key});
@@ -34,7 +33,7 @@ class _SubmissionScreenState extends State<SubmissionScreen> {
   ];
   String deptDropDownValue = 'CSE';
 
-  File file = File("");
+  // File file = File("");
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,7 @@ class _SubmissionScreenState extends State<SubmissionScreen> {
       ),
       body: SafeArea(
           child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
+        // scrollDirection: Axis.vertical,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -178,18 +177,15 @@ class _SubmissionScreenState extends State<SubmissionScreen> {
               ),
               const SizedBox(height: 10),
 
+              // upload Cover Page
+              const UploadFileWidget(
+                title: 'Upload Cover page',
+              ),
+              const SizedBox(height: 10),
               // upload pdf
-              MaterialButton(
-                onPressed: () {
-                  pickFile();
-                },
-                child: Row(
-                  children: [
-                    const Icon(Icons.file_upload_outlined),
-                    Text('Upload Pdf', style: GoogleFonts.ubuntu())
-                  ],
-                ),
-              )
+              const UploadFileWidget(
+                title: 'Upload PDF',
+              ),
             ],
           ),
         ),
@@ -217,9 +213,4 @@ class STPTextWidget extends StatelessWidget {
           hintStyle: GoogleFonts.ubuntu()),
     );
   }
-}
-
-void pickFile() async {
-  FilePickerResult? pickerResult =
-      await FilePicker.platform.pickFiles(type: FileType.media);
 }
