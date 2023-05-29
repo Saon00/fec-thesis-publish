@@ -1,3 +1,4 @@
+import 'package:fecthesispublish/screens/main_navbar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,8 +33,6 @@ class _SubmissionScreenState extends State<SubmissionScreen> {
     'CE',
   ];
   String deptDropDownValue = 'CSE';
-
-  // File file = File("");
 
   @override
   Widget build(BuildContext context) {
@@ -195,7 +194,9 @@ class _SubmissionScreenState extends State<SubmissionScreen> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue.shade900,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(const MainNavBarScreen());
+                  },
                   child: Text('Submit', style: GoogleFonts.ubuntu()),
                 ),
               ),

@@ -1,4 +1,4 @@
-import 'package:fecthesispublish/screens/submission_screen.dart';
+import 'package:fecthesispublish/screens/main_navbar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SubmissionScreen(),
+      home: MainNavBarScreen(),
     );
   }
 }

@@ -1,4 +1,8 @@
+import 'package:fecthesispublish/screens/submission_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../components/color.dart';
 
 class PapersScreen extends StatefulWidget {
   const PapersScreen({super.key});
@@ -10,6 +14,15 @@ class PapersScreen extends StatefulWidget {
 class _PapersScreenState extends State<PapersScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      // floatingActionButton
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: CustomColor.BLUEGREY,
+        onPressed: () {
+          Get.to(const SubmissionScreen());
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 }
