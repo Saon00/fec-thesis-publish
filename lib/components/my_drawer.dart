@@ -23,7 +23,7 @@ class MyDrawer extends StatelessWidget {
               // fec logo
               Column(
                 children: [
-                  Image.asset('assets/fec_logo.png'),
+                  Image.asset('assets/images/fec_logo.png'),
 
                   // contact
                   ListTile(

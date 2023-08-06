@@ -17,6 +17,7 @@ class _PapersScreenState extends State<PapersScreen> {
   late String searchText = "";
 
   List<String> batchDropDownItem = <String>[
+    'All',
     'Batch-01',
     'Batch-02',
     'Batch-03',
@@ -28,14 +29,15 @@ class _PapersScreenState extends State<PapersScreen> {
     'Batch-09',
     'Batch-10',
   ];
-  String batchDropDownValue = 'Batch-01';
+  String batchDropDownValue = 'All';
 
   List<String> deptDropDownItem = <String>[
+    'All',
     'CSE',
     'EEE',
     'CE',
   ];
-  String deptDropDownValue = 'CSE';
+  String deptDropDownValue = 'All';
 
   @override
   Widget build(BuildContext context) {
