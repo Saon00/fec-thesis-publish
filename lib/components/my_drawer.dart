@@ -1,5 +1,5 @@
 import 'package:fecthesispublish/components/color.dart';
-import 'package:fecthesispublish/screens/sign_up_screen.dart';
+import 'package:fecthesispublish/screens/auths/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
