@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../constants/app_colors.dart';
 import '../../constants/app_fonts.dart';
 
 class SpalshWidget extends StatelessWidget {
@@ -21,8 +20,12 @@ class SpalshWidget extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(30),
-          child: Center(
-            child: Column(
+          child: Stack(children: [
+            const Align(
+              alignment: Alignment.topRight,
+              child: Icon(Icons.arrow_forward_ios_outlined),
+            ),
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
@@ -39,29 +42,29 @@ class SpalshWidget extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                SizedBox(
-                  width: 250,
-                  height: 50,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: purple.withOpacity(.8),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          10,
-                        ),
-                      ),
-                    ),
-                    onPressed: onTap,
-                    child: Text("Continue",
-                        style: popins.copyWith(
-                            fontSize: 20,
-                            color: black,
-                            fontWeight: FontWeight.w500)),
-                  ),
-                )
+                // SizedBox(
+                //   width: 250,
+                //   height: 50,
+                //   child: ElevatedButton(
+                //     style: ElevatedButton.styleFrom(
+                //       backgroundColor: purple.withOpacity(.8),
+                //       shape: RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.circular(
+                //           10,
+                //         ),
+                //       ),
+                //     ),
+                //     onPressed: onTap,
+                //     child: Text("Continue",
+                //         style: popins.copyWith(
+                //             fontSize: 20,
+                //             color: black,
+                //             fontWeight: FontWeight.w500)),
+                //   ),
+                // )
               ],
             ),
-          ),
+          ]),
         ),
       ),
     );

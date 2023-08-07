@@ -25,6 +25,7 @@ dependencies:
   file_picker: ^5.2.11
   flutter_svg: ^2.0.7
   rive: ^0.11.12
+  smooth_page_indicator: ^1.1.0
   
 
 dev_dependencies:
@@ -33,7 +34,6 @@ dev_dependencies:
 
 
   flutter_lints: ^2.0.0
-  # rive: ^0.11.12
 
 flutter:
 
