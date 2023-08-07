@@ -23,7 +23,8 @@ class _SplashScreenState extends State<SplashScreen> {
     return const Scaffold(
       body: SafeArea(
         child: Center(
-          child: RiveAnimation.asset('assets/animations/walk.riv'),
+          child: Expanded(
+              child: RiveAnimation.asset('assets/animations/walk.riv')),
         ),
       ),
     );
