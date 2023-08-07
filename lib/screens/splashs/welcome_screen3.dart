@@ -10,8 +10,8 @@ class WelcomeScreen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SpalshWidget(
-      bannerImgpath: 'assets/svgs/knowledge.svg',
-      sloganName: 'Try to gather knowledge from vast world',
+      bannerImgpath: 'assets/svgs/articles.svg',
+      sloganName: 'Read more to know topics deeply and accurately',
       onTap: () {
         Get.to(() => const WelcomeScreen2(),
             transition: Transition.rightToLeft,

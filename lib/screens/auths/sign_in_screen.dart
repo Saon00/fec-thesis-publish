@@ -1,15 +1,17 @@
+import 'package:fecthesispublish/constants/app_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/form_wid.dart';
+import '../../constants/app_colors.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final double resWidth = MediaQuery.of(context).size.width; // 360
-    final double resHeight = MediaQuery.of(context).size.height; // 677.33
+    // final double resWidth = MediaQuery.of(context).size.width; // 360
+    // final double resHeight = MediaQuery.of(context).size.height; // 677.33
 
     return Scaffold(
       body: SafeArea(
@@ -23,6 +25,9 @@ class SignInScreen extends StatelessWidget {
                 // text
                 Container(
                   decoration: BoxDecoration(
+                      border: Border.all(
+                        color: black.withOpacity(.4),
+                      ),
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(15)),
                   child: Padding(
@@ -55,11 +60,10 @@ class SignInScreen extends StatelessWidget {
                           width: double.infinity,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.pink,
+                                backgroundColor: primaryColor,
                               ),
                               onPressed: () {},
-                              child: Text('SIGN IN',
-                                  style: GoogleFonts.poiretOne())),
+                              child: Text('SIGN IN', style: popins)),
                         ),
 
                         // create new account
@@ -67,7 +71,7 @@ class SignInScreen extends StatelessWidget {
                           onPressed: () {},
                           child: Text(
                             'Create an account',
-                            style: GoogleFonts.comfortaa(color: Colors.grey),
+                            style: popins.copyWith(color: grey.withOpacity(.8)),
                           ),
                         ),
                       ],

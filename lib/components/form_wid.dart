@@ -1,5 +1,6 @@
+import 'package:fecthesispublish/constants/app_colors.dart';
+import 'package:fecthesispublish/constants/app_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class FormWidget extends StatelessWidget {
   final String text;
@@ -20,7 +21,9 @@ class FormWidget extends StatelessWidget {
         obscureText: obsecuretext ?? false,
         controller: controller,
         decoration: InputDecoration(
-            hintText: text, hintStyle: GoogleFonts.roboto(color: Colors.grey)),
+            hintText: text,
+            hintStyle:
+                popins.copyWith(fontSize: 15, color: grey.withOpacity(.8))),
       ),
     );
   }
