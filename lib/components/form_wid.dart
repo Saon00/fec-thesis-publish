@@ -7,12 +7,14 @@ class FormWidget extends StatelessWidget {
   final TextEditingController controller;
   final bool? obsecuretext;
   final TextInputType textInputType;
+  final Widget? widget;
   const FormWidget({
     super.key,
     required this.text,
     required this.controller,
     this.obsecuretext,
     required this.textInputType,
+    this.widget,
   });
 
   @override
@@ -25,9 +27,12 @@ class FormWidget extends StatelessWidget {
         controller: controller,
         cursorColor: grey,
         style: ubuntu.copyWith(
-          color: primaryColor.withOpacity(.8),
+          color: black.withOpacity(.7),
         ),
         decoration: InputDecoration(
+          focusedBorder: const UnderlineInputBorder(
+              borderSide: BorderSide(color: primaryColor)),
+          suffixIcon: widget,
           hintText: text,
           hintStyle: popins.copyWith(
             fontSize: 15,
