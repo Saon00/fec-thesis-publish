@@ -26,6 +26,7 @@ dependencies:
   flutter_svg: ^2.0.7
   rive: ^0.11.12
   smooth_page_indicator: ^1.1.0
+  supabase_flutter: ^1.10.11
   
 
 dev_dependencies:

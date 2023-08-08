@@ -1,5 +1,6 @@
 import 'package:fecthesispublish/constants/app_fonts.dart';
 import 'package:fecthesispublish/screens/auths/sign_up_screen.dart';
+import 'package:fecthesispublish/screens/main_navbar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,8 +9,16 @@ import '../../components/form_wid.dart';
 import '../../constants/app_colors.dart';
 import 'elevatedbutton.dart';
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
+
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +56,7 @@ class SignInScreen extends StatelessWidget {
                         // user-name
                         FormWidget(
                           textInputType: TextInputType.text,
-                          controller: TextEditingController(),
+                          controller: emailController,
                           text: 'Email Address',
                         ),
                         const SizedBox(height: 10),
@@ -55,7 +64,7 @@ class SignInScreen extends StatelessWidget {
                         FormWidget(
                           obsecuretext: true,
                           textInputType: TextInputType.text,
-                          controller: TextEditingController(),
+                          controller: passwordController,
                           text: 'Password',
                         ),
                         const SizedBox(height: 20),
@@ -64,13 +73,15 @@ class SignInScreen extends StatelessWidget {
                         ElevatedButtonWidget(
                           buttonName: 'SIGN IN',
                           ontap: () {
-                            Get.to(() => const SignUpScreen());
+                            Get.offAll(() => const MainNavBarScreen());
                           },
                         ),
 
                         // create new account
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(() => const SignUpScreen());
+                          },
                           child: Text(
                             'Create an account',
                             style: popins.copyWith(color: grey.withOpacity(.8)),
