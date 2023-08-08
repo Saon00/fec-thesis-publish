@@ -1,7 +1,9 @@
+import 'package:fecthesispublish/screens/auths/elevatedbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/form_wid.dart';
+import '../../constants/app_colors.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -18,6 +20,9 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
+                      border: Border.all(
+                        color: black.withOpacity(.4),
+                      ),
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(15)),
                   child: Padding(
@@ -34,6 +39,7 @@ class SignUpScreen extends StatelessWidget {
 
                         // first name
                         FormWidget(
+                          textInputType: TextInputType.text,
                           text: 'First Name',
                           controller: TextEditingController(),
                         ),
@@ -41,6 +47,7 @@ class SignUpScreen extends StatelessWidget {
 
                         // last name
                         FormWidget(
+                          textInputType: TextInputType.text,
                           text: 'Last Name',
                           controller: TextEditingController(),
                         ),
@@ -48,6 +55,7 @@ class SignUpScreen extends StatelessWidget {
 
                         // email address
                         FormWidget(
+                          textInputType: TextInputType.emailAddress,
                           text: 'Email Address',
                           controller: TextEditingController(),
                         ),
@@ -55,6 +63,7 @@ class SignUpScreen extends StatelessWidget {
 
                         // registration no
                         FormWidget(
+                          textInputType: TextInputType.number,
                           text: 'Registration No.',
                           controller: TextEditingController(),
                         ),
@@ -62,6 +71,7 @@ class SignUpScreen extends StatelessWidget {
 
                         // password
                         FormWidget(
+                          textInputType: TextInputType.text,
                           text: 'Password',
                           obsecuretext: true,
                           controller: TextEditingController(),
@@ -69,6 +79,7 @@ class SignUpScreen extends StatelessWidget {
                         const SizedBox(height: 10),
                         // confirm password
                         FormWidget(
+                          textInputType: TextInputType.text,
                           text: 'Confirm Password',
                           obsecuretext: true,
                           controller: TextEditingController(),
@@ -76,16 +87,8 @@ class SignUpScreen extends StatelessWidget {
                         const SizedBox(height: 20),
 
                         // sign-up button
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.pink,
-                              ),
-                              onPressed: () {},
-                              child: Text('SIGN Up',
-                                  style: GoogleFonts.poiretOne())),
-                        ),
+                        ElevatedButtonWidget(
+                            buttonName: 'SIGN UP', ontap: () {}),
                       ],
                     ),
                   ),

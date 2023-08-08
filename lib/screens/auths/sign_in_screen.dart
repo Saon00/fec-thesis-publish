@@ -1,9 +1,12 @@
 import 'package:fecthesispublish/constants/app_fonts.dart';
+import 'package:fecthesispublish/screens/auths/sign_up_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/form_wid.dart';
 import '../../constants/app_colors.dart';
+import 'elevatedbutton.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -43,6 +46,7 @@ class SignInScreen extends StatelessWidget {
 
                         // user-name
                         FormWidget(
+                          textInputType: TextInputType.text,
                           controller: TextEditingController(),
                           text: 'Email Address',
                         ),
@@ -50,20 +54,18 @@ class SignInScreen extends StatelessWidget {
                         // password
                         FormWidget(
                           obsecuretext: true,
+                          textInputType: TextInputType.text,
                           controller: TextEditingController(),
                           text: 'Password',
                         ),
                         const SizedBox(height: 20),
 
                         // sign-in button
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: primaryColor,
-                              ),
-                              onPressed: () {},
-                              child: Text('SIGN IN', style: popins)),
+                        ElevatedButtonWidget(
+                          buttonName: 'SIGN IN',
+                          ontap: () {
+                            Get.to(() => const SignUpScreen());
+                          },
                         ),
 
                         // create new account
