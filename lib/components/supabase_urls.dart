@@ -1,3 +1,0 @@
-const String supabaseUrl = "https://bfudkgqpqioeusceysfl.supabase.co";
-const String supabaseAnonKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmdWRrZ3FwcWlvZXVzY2V5c2ZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTE0ODM5MjcsImV4cCI6MjAwNzA1OTkyN30.rmYmR18s2-_WE9a-bswlWxYlZCpIckkDV6D7e0QUKZk";

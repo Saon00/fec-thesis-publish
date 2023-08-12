@@ -8,6 +8,7 @@ class FormWidget extends StatelessWidget {
   final bool? obsecuretext;
   final TextInputType textInputType;
   final Widget? widget;
+  final FormFieldValidator? fieldValidator;
   const FormWidget({
     super.key,
     required this.text,
@@ -15,6 +16,7 @@ class FormWidget extends StatelessWidget {
     this.obsecuretext,
     required this.textInputType,
     this.widget,
+    this.fieldValidator,
   });
 
   @override
@@ -22,6 +24,7 @@ class FormWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: TextFormField(
+        validator: fieldValidator,
         keyboardType: textInputType,
         obscureText: obsecuretext ?? false,
         controller: controller,

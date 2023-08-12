@@ -29,7 +29,8 @@ class _PapersScreenState extends State<PapersScreen> {
     'Batch-09',
     'Batch-10',
   ];
-  String batchDropDownValue = 'All';
+  // String batchDropDownValue = 'All';
+  String batchDropDownValue = "All";
 
   List<String> deptDropDownItem = <String>[
     'All',

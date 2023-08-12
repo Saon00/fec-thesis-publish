@@ -16,6 +16,7 @@ class SpalshWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double resHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -30,17 +31,17 @@ class SpalshWidget extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   bannerImgpath,
-                  height: 250,
+                  height: resHeight / 3.5,
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: resHeight / 35,
                 ),
                 Text(
                   sloganName,
-                  style: popins.copyWith(fontSize: 30),
+                  style: popins.copyWith(fontSize: resHeight / 25),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: resHeight / 35,
                 ),
                 // SizedBox(
                 //   width: 250,
