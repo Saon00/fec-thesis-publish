@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:fecthesispublish/screens/auths/elevatedbutton.dart';
+import 'package:fecthesispublish/screens/auths/sign_in_screen.dart';
 import 'package:fecthesispublish/services/auth_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -196,6 +197,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       backgroundColor:
                                           Theme.of(context).colorScheme.primary,
                                     ));
+                                    Get.off(() => const SignInScreen());
                                   }
                                 } on AuthException catch (e) {
                                   Get.showSnackbar(GetSnackBar(
