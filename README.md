@@ -1,4 +1,4 @@
-# FEC-Thesis-publish Mobile Application using Flutter
+# FEC-Thesis-publish Mobile Application using Flutter - Supabase
 ## 📄Description
 👋 Hey,
 It's an academic project on which I'm working now. This project collects the THESIS Papers from users when they upload and categorised them into DEPARTMENTS. Also students can write BLOG on various topics so that others can gain knowledge. <br>
