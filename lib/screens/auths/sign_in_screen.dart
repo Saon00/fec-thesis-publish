@@ -7,6 +7,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../components/form_wid.dart';
 import '../../constants/app_colors.dart';
+import '../../services/auth_services.dart';
 import '../main_navbar_screen.dart';
 import 'elevatedbutton.dart';
 
@@ -134,18 +135,18 @@ class _SignInScreenState extends State<SignInScreen> {
                                 //       SupabaseCredentials.emailRedirect,
                                 // );
 
-                                // await AuthServices.signInWithEmail(
-                                //   email: _emailController.text,
-                                //   password: _passwordController.text,
-                                // );
+                                await AuthServices.signIN(
+                                  email: _emailController.text,
+                                  password: _passwordController.text,
+                                );
 
-                                Get.offAll(() => const MainNavBarScreen());
                                 if (mounted) {
                                   Get.showSnackbar(const GetSnackBar(
                                     duration: Duration(seconds: 3),
-                                    // message: 'Login Successfull',
-                                    message: 'Check Your mail',
+                                    message: 'Login Successfull',
+                                    // message: 'Check Your mail',
                                   ));
+                                  Get.offAll(() => const MainNavBarScreen());
                                 }
                               } on AuthException catch (e) {
                                 Get.showSnackbar(GetSnackBar(

@@ -1,8 +1,6 @@
 import 'package:fecthesispublish/components/color.dart';
 import 'package:fecthesispublish/constants/supabase_urls.dart';
-import 'package:fecthesispublish/main.dart';
 import 'package:fecthesispublish/screens/auths/sign_in_screen.dart';
-import 'package:fecthesispublish/services/auth_services.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -68,13 +66,14 @@ class MyDrawer extends StatelessWidget {
                   Get.to(() => const SignInScreen());
                 },
                 child: ListTile(
-                    leading: FaIcon(FontAwesomeIcons.rightFromBracket,
-                        color: CustomColor.WHITE),
-                    title: Text(
-                      'Log-Out',
-                      style: GoogleFonts.ubuntu(color: CustomColor.WHITE),
-                    )),
-              )
+                  leading: FaIcon(FontAwesomeIcons.rightFromBracket,
+                      color: CustomColor.WHITE),
+                  title: Text(
+                    'Log-Out',
+                    style: GoogleFonts.ubuntu(color: CustomColor.WHITE),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

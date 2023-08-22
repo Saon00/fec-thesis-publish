@@ -22,7 +22,7 @@ class AuthServices {
   }
 
   // SignOut
-  // Signup
+  // otp
 }
 
 /*
